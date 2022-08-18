@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+* {
+  box-sizing: border-box;
+}
+
+.panel {
+  display: none;
+  padding: 30px 100px 20px;
+  background: #fff;
+}
+.pan-text-lol {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.panel-text {
+  width: 539px;
+}
+.panel-text h4{
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #111111;
+  margin-top: 72px;
+}
+.panel-text span {
+  color: #EF6E5D;
+}
+.panel-text p {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  color: #111111;
+  opacity: 0.72;
+}
+
+.panel-img img {
+  width: 763px;
+  height: 502px;
+  margin-top: 36px;
+}
+
+.nav-tabs__wrap h1 {
+  margin: 0;
+  font-family: 'Bree Serif', serif;
+  font-size: 36px;
+}
+.nav-tabs__wrap p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  justify-content: center;
+}
+.input {
+  position: absolute;
+  opacity: 0;
+}
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  transition: background 0.1s, color 0.1s;
+}
+.label:hover {
+  background: #d8d8d8;
+}
+.label:active {
+  background: #ccc;
+}
+.input:focus + .label {
+  z-index: 1;
+}
+.input:checked + .label {
+  background: #fff;
+  color: #000;
+}
+.input:checked + .label + .panel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.label {
+  width: auto;
+}
+.panel {
+  order: 99;
+}
+
+@media (max-width: 800px) {
+  .nav-tabs__wrap {
+    padding: 60px 10px;
+  }
+  .input:checked + .label + .panel {
+    flex-direction: column;
+    align-items: center;
+  }
+  .panel-text {
+    width: 100%;
+    padding-left: 30px;
+  }
+  .panel-text h4 {
+    margin-top: 10px;
+  }
+
+  .panel {
+    padding: 20px 20px 30px;
+  }
+  .tabs {
+    overflow-x: scroll;
+  }
+}
